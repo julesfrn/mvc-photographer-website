@@ -1,3 +1,4 @@
+# no need to rewrite url for backend side
 RewriteEngine On
 
 RewriteRule ^accueil$ index.php

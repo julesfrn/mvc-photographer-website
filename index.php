@@ -8,7 +8,7 @@ try {
   if (isset($_GET['action'])) {
     $action = $_GET['action'];
   } else {
-    showVPost();
+    showVSeriesList();
   }
 } catch (Exception $e) {
   $errorMessage = 'Erreur :' . $e->getMessage();

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AACE,YADU,CACV,EAAE,CAAC;EACD,KAAK,EAAE,GAAG;CACX",
+    "sources": [
+        "style.scss",
+        "backend/VSeriesList.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
