@@ -7,6 +7,9 @@ require('controllers/backend.controller.php');
 try {
   if (isset($_GET['action'])) {
     $action = $_GET['action'];
+    if ($action == 'admin-listSeries') {
+      showVSeriesList();  
+    }
   } else {
     showVSeriesList();
   }

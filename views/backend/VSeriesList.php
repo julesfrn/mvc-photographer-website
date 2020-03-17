@@ -2,7 +2,11 @@
 
 <?php ob_start(); ?>
 <div class="series-list">
-  <h1>Hello World!</h1>
+  <ul>
+    <?php while ($serie = $series->fetch()) {?>
+    <li><?= $serie['name'] ?></li>
+    <?php } ?>
+  </ul>
 </div>
 <?php
 $content = ob_get_clean();
