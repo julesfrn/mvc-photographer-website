@@ -9,6 +9,12 @@ try {
     $action = $_GET['action'];
     if ($action == 'admin-listSeries') {
       showVSeriesList();  
+    } elseif ($action == 'admin-addSerie') {
+      if (!empty($_POST['serieName'])) {
+        addComment($_POST['serieName']);
+      } else {
+        throw new Exception('Tous les champs ne sont pas remplis');
+      }
     }
   } else {
     showVSeriesList();
