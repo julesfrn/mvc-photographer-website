@@ -1,5 +1,6 @@
 <?php
 
+require_once('models/ImagesManager.php');
 require_once('models/SeriesManager.php');
 
 function showVASeriesList() {
@@ -19,7 +20,9 @@ function addComment($serieName) {
 }
 
 function showVASerie($serieName) {
+  $imagesManager = new B2\mb\Model\ImagesManager();
   $seriesManager = new B2\mb\Model\SeriesManager();
+  $images = $imagesManager->getImagesBySerieName($serieName);
   $serie = $seriesManager->getSerieByName($serieName);
   require('views/backend/VASerie.php');
 }
