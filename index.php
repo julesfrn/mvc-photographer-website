@@ -13,13 +13,19 @@ try {
       if (!empty($_POST['serieName'])) {
         addComment($_POST['serieName']);
       } else {
-        throw new Exception('Tous les champs ne sont pas remplis');
+        throw new Exception('Tous les champs ne sont pas remplis...');
+      }
+    } elseif ($action == 'admin-showSerie') {
+      if (isset($_GET['serie'])) {
+        showVASerie($_GET['serie']);
+      } else {
+        throw new Exception('Il manque le nom de la série...');
       }
     }
   } else {
     showVASeriesList();
   }
 } catch (Exception $e) {
-  $errorMessage = 'Erreur :' . $e->getMessage();
+  $errorMessage = 'Erreur : ' . $e->getMessage();
   require('views/VError.php');
 }

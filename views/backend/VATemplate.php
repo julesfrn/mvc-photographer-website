@@ -11,6 +11,7 @@
 <body>
   <div class="container admin-template mt-3">
     <h1>Martin Bruno - Espace Administrateur</h1>
+    <hr class="my-3">
     <?= $content ?>
   </div>
 </body>

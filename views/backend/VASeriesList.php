@@ -2,7 +2,6 @@
 
 <?php ob_start(); ?>
 <div class="series-list">
-  <hr class="my-3">
   <div class="card" style="width: 100%;">
     <div class="card-header">
       Les séries
@@ -10,7 +9,7 @@
     <ul class="list-group list-group-flush">
       <?php while ($serie = $series->fetch()) {?>
       <li class="list-group-item">
-        <a href="index.php?action=admin-showSerie&serie=<?= 'TODO' ?>"><?= $serie['name'] ?></a>
+        <a href="index.php?action=admin-showSerie&serie=<?= $serie['seo_name'] ?>"><?= $serie['name'] ?></a>
       </li>
       <?php } ?>
     </ul>

@@ -13,14 +13,29 @@ class SeriesManager extends Manager {
 
   public function postSerie($serieName) {
     $db = $this->dbConnect();
-    $request = $db->prepare(
+    $query = $db->prepare(
       'INSERT INTO series(
         name,
         number_of_pictures,
         seo_name
       ) VALUES(?, ?, ?)'
     );
-    $affectedLines = $request->execute(array($serieName, 0, $this->format_url($this->remove_accents($serieName))));
+    $affectedLines = $query->execute(array($serieName, 0, $this->format_url($this->remove_accents($serieName))));
+    return $affectedLines;
+  }
+
+  public function getSerieByName($serieName) {
+    $db = $this->dbConnect();
+    $query = $db->prepare(
+      'SELECT 
+      name,
+      number_of_pictures,
+      seo_name
+      FROM series WHERE `seo_name` = ?'
+    );
+    $query->execute(array($serieName));
+    $serie = $query->fetch();
+    return $serie;
   }
 
   private function format_url( $url, $type = '' ) {

@@ -17,3 +17,9 @@ function addComment($serieName) {
     header('Location: index.php?action=admin-listSeries');
   }
 }
+
+function showVASerie($serieName) {
+  $seriesManager = new B2\mb\Model\SeriesManager();
+  $serie = $seriesManager->getSerieByName($serieName);
+  require('views/backend/VASerie.php');
+}
