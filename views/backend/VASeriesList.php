@@ -9,7 +9,7 @@
     <ul class="list-group list-group-flush">
       <?php while ($serie = $series->fetch()) {?>
       <li class="list-group-item">
-        <a href="index.php?action=admin-showSerie&serie=<?= $serie['seo_name'] ?>"><?= $serie['name'] ?></a>
+        <a href="index.php?action=admin-showSerie&serie=<?= htmlspecialchars($serie['seo_name']) ?>"><?= htmlspecialchars($serie['name']) ?></a>
       </li>
       <?php } ?>
     </ul>

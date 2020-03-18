@@ -12,7 +12,7 @@
   }
 </style>
 <p class="retour">Retour</p>
-<h3 class="error"><?= $errorMessage ?></h3>
+<h3 class="error"><?= htmlspecialchars($errorMessage) ?></h3>
 <script>
   document.querySelector('.retour').addEventListener('click', () => {
     window.history.back()
