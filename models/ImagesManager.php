@@ -11,4 +11,11 @@ class ImagesManager extends Manager {
     $images->execute(array($serieName));
     return $images;
   }
+
+  public function postImage($imageName, $imageDescription, $serieName) {
+    $db = $this->dbConnect();
+    $query = $db->prepare('INSERT INTO `images` (`image_name`, `image_description`, `serie_name`) VALUES (?, ?, ?)');
+    $affectedLines = $query->execute(array($imageName, $imageDescription, $serieName));
+    return $affectedLines;
+  }
 }

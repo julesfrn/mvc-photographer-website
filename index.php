@@ -21,6 +21,12 @@ try {
       } else {
         throw new Exception('Il manque le nom de la série...');
       }
+    } elseif ($action == 'admin-addImage') {
+      if (!empty($_FILES['image']) && !empty($_POST['description']) && isset($_GET['serie'])) {
+        addImage($_FILES['image'], $_POST['description'], $_GET['serie']);
+      } else {
+        throw new Exception('Tous les champs ne sont pas remplis...');
+      }
     }
   } else {
     showVASeriesList();

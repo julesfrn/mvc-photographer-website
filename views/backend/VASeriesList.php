@@ -14,7 +14,7 @@
       <?php } ?>
     </ul>
   </div>
-  <form class="form-inline mt-3">
+  <form class="form-inline mt-3" action="index.php?action=admin-addSerie" method="post">
     <div class="form-group mr-2">
       <label for="input" class="sr-only">Ajouter une série</label>
       <input type="text" class="form-control" id="input" placeholder="Ajouter une série" name="serieName">
