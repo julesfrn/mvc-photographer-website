@@ -25,5 +25,5 @@
 </div>
 <?php
 $content = ob_get_clean();
-require('views/backend/VAdminTemplate.php');
+require('views/backend/VATemplate.php');
 ?>

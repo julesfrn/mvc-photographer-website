@@ -2,10 +2,10 @@
 
 require_once('models/SeriesManager.php');
 
-function showVSeriesList() {
+function showVASeriesList() {
   $seriesManager = new B2\mb\Model\SeriesManager();
   $series = $seriesManager->getSeries();
-  require('views/backend/VSeriesList.php');
+  require('views/backend/VASeriesList.php');
 }
 
 function addComment($serieName) {

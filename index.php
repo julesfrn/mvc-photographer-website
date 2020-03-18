@@ -8,7 +8,7 @@ try {
   if (isset($_GET['action'])) {
     $action = $_GET['action'];
     if ($action == 'admin-listSeries') {
-      showVSeriesList();  
+      showVASeriesList();  
     } elseif ($action == 'admin-addSerie') {
       if (!empty($_POST['serieName'])) {
         addComment($_POST['serieName']);
@@ -17,7 +17,7 @@ try {
       }
     }
   } else {
-    showVSeriesList();
+    showVASeriesList();
   }
 } catch (Exception $e) {
   $errorMessage = 'Erreur :' . $e->getMessage();
