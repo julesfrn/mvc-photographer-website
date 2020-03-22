@@ -16,6 +16,12 @@ html {
   font-size: 16px;
 }
 
+.container {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: $y-margin $x-margin;
+}
+
 //   /$$$$$$  /$$      /$$                              
 //  /$$__  $$| $$$    /$$$                              
 // | $$  \__/| $$$$  /$$$$  /$$$$$$  /$$$$$$$  /$$   /$$
@@ -32,6 +38,7 @@ html {
   font-size: 44px;
   font-weight: 400;
   text-transform: uppercase;
+  position: absolute;
   span {
     font-weight: 900;
   }
@@ -60,7 +67,11 @@ html {
       font-size: 20px;
       letter-spacing: 2px;
       margin: 0 25px;
+      color: #000;
       transition: color .2s ease-out;
+      &:visited {
+        color: #000;
+      }
       &:hover {
         color: #a0a0a0;
       }
@@ -103,4 +114,25 @@ html {
 //     \_/    |__/  |__/ \______/ |__/ |__/ |__/ \_______/
 .v-home {
   height: 100vh;
+  overflow: hidden;
+  .v-home__images-container {
+    height: 100%;
+    position: relative;
+    .v-home__img-wrapper {
+      position: absolute;
+      max-height: 90%;
+      max-width: 70%;
+      transform-origin: top right;
+      right: 20%;
+      top: 0;
+      &:first-child {
+        right: 30%;
+        top: 10%;
+      }
+      &:last-child {
+        right: 10%;
+        top: 7%;
+      }
+    }
+  }
 }

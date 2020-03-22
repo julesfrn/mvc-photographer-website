@@ -5,6 +5,12 @@ namespace B2\mb\Model;
 require_once('Manager.php');
 
 class ImagesManager extends Manager {
+  public function get3RandomImages() {
+    $db = $this->dbConnect();
+    $images = $db->query('SELECT image_name FROM images ORDER BY RAND() LIMIT 3');
+    return $images;
+  }
+
   public function getImagesBySerieName($serieName) {
     $db = $this->dbConnect();
     $images = $db->prepare('SELECT image_name, image_description, serie_name FROM images WHERE	`serie_name` = ?');

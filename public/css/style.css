@@ -10,6 +10,13 @@ html {
   font-size: 16px;
 }
 
+.container {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 64px 100px;
+}
+
 .menu__title {
   z-index: 999;
   margin: 0;
@@ -18,6 +25,7 @@ html {
   font-size: 44px;
   font-weight: 400;
   text-transform: uppercase;
+  position: absolute;
 }
 
 .menu__title span {
@@ -61,8 +69,13 @@ html {
   font-size: 20px;
   letter-spacing: 2px;
   margin: 0 25px;
+  color: #000;
   -webkit-transition: color .2s ease-out;
   transition: color .2s ease-out;
+}
+
+.menu__nav ul a:visited {
+  color: #000;
 }
 
 .menu__nav ul a:hover {
@@ -107,5 +120,31 @@ html {
 
 .v-home {
   height: 100vh;
+  overflow: hidden;
+}
+
+.v-home .v-home__images-container {
+  height: 100%;
+  position: relative;
+}
+
+.v-home .v-home__images-container .v-home__img-wrapper {
+  position: absolute;
+  max-height: 90%;
+  max-width: 70%;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  right: 20%;
+  top: 0;
+}
+
+.v-home .v-home__images-container .v-home__img-wrapper:first-child {
+  right: 30%;
+  top: 10%;
+}
+
+.v-home .v-home__images-container .v-home__img-wrapper:last-child {
+  right: 10%;
+  top: 7%;
 }
 /*# sourceMappingURL=style.css.map */
