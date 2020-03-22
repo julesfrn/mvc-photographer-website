@@ -26,7 +26,7 @@ function animate() {
   c.stroke()
   increment += wave.frequency
   c.fillStyle = '#fff'
-  c.fillRect(0, 0, 1, canvas.height)
+  c.fillRect(0, 0, 3, canvas.height)
 }
 animate()
 
