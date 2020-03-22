@@ -11,6 +11,7 @@ html {
 }
 
 .container {
+  position: relative;
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -121,6 +122,10 @@ html {
 .v-home {
   height: 100vh;
   overflow: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 50% 400px;
+          perspective-origin: 50% 400px;
 }
 
 .v-home .v-home__images-container {
@@ -128,23 +133,67 @@ html {
   position: relative;
 }
 
-.v-home .v-home__images-container .v-home__img-wrapper {
+.v-home .v-home__images-container img {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 555;
   position: absolute;
-  max-height: 90%;
+  max-height: 70%;
   max-width: 70%;
+  min-height: 60%;
   -webkit-transform-origin: top right;
           transform-origin: top right;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   right: 20%;
   top: 0;
 }
 
-.v-home .v-home__images-container .v-home__img-wrapper:first-child {
+.v-home .v-home__images-container img:first-child {
   right: 30%;
   top: 10%;
 }
 
-.v-home .v-home__images-container .v-home__img-wrapper:last-child {
+.v-home .v-home__images-container img:last-child {
   right: 10%;
   top: 7%;
+}
+
+.v-home .v-home__new-box-wrapper {
+  z-index: 999;
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.v-home .v-home__new-box-wrapper .v-home__new-box {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  position: absolute;
+  width: 300px;
+  -webkit-transform: rotate(-90deg) translateX(150px);
+          transform: rotate(-90deg) translateX(150px);
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+  margin: 0;
+}
+
+.v-home .v-home__new-box-wrapper .v-home__new-box:hover {
+  color: #a0a0a0;
 }
 /*# sourceMappingURL=style.css.map */

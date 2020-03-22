@@ -13,10 +13,11 @@ $scripts = '
   <div class="container">
     <div class="v-home__images-container">
     <?php while ($image = $images->fetch()) { ?>
-      <div class="v-home__img-wrapper">
-        <img src="/public/images/<?= $image['image_name'] ?>" alt="">
-      </div>
+      <img src="/public/images/<?= $image['image_name'] ?>">
     <?php } ?>
+      <div class="v-home__new-box-wrapper">
+        <p class="v-home__new-box">nouvelle&nbsp;&nbsp;boite</p>
+      </div>
     </div>
   </div>
 </div>

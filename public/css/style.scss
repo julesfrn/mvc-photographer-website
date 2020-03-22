@@ -17,6 +17,7 @@ html {
 }
 
 .container {
+  position: relative;
   height: 100vh;
   box-sizing: border-box;
   padding: $y-margin $x-margin;
@@ -115,14 +116,20 @@ html {
 .v-home {
   height: 100vh;
   overflow: hidden;
+  perspective: 1000px;
+  perspective-origin: 50% 400px;
   .v-home__images-container {
     height: 100%;
     position: relative;
-    .v-home__img-wrapper {
+    img {
+      transform-style: preserve-3d;
+      z-index: 555;
       position: absolute;
-      max-height: 90%;
+      max-height: 70%;
       max-width: 70%;
+      min-height: 60%;
       transform-origin: top right;
+      transition: all 1s ease-out;
       right: 20%;
       top: 0;
       &:first-child {
@@ -132,6 +139,33 @@ html {
       &:last-child {
         right: 10%;
         top: 7%;
+      }
+    }
+  }
+  .v-home__new-box-wrapper {
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    $nav-height: 25px;
+    width: $nav-height;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .v-home__new-box {
+      transform-origin: bottom right;
+      position: absolute;
+      width: 300px;
+      transform: rotate(-90deg) translateX(150px);
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 2px;
+      transition: color .2s ease-out;
+      margin: 0;
+      &:hover {
+        color: #a0a0a0;
       }
     }
   }
