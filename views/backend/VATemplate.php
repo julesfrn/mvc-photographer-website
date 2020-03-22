@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?= $title ?></title>
   <link rel="stylesheet" href="/public/css/bootstrap.css">
-  <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
   <div class="container admin-template mt-3">

@@ -1,18 +1,4 @@
 @font-face {
-  font-family: 'noto-sans-jp';
-  src: url("../fonts/notosansjp-black-webfont.woff2") format("woff2"), url("../fonts/notosansjp-black-webfont.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'noto-sans-jp';
-  src: url("../fonts/notosansjp-regular-webfont.woff2") format("woff2"), url("../fonts/notosansjp-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'nunito';
   src: url("../fonts/nunito-regular-webfont.woff2") format("woff2"), url("../fonts/nunito-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -20,7 +6,97 @@
 }
 
 html {
-  font-family: 'nunito' sans-serif;
+  font-family: 'nunito', sans-serif;
   font-size: 16px;
+}
+
+.menu__title {
+  z-index: 999;
+  margin: 0;
+  padding: 64px 0 0 100px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.menu__title span {
+  font-weight: 900;
+}
+
+.menu__nav {
+  z-index: 998;
+  position: absolute;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 100vh;
+  height: 25px;
+  left: calc(100px + 25px);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.menu__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.menu__nav ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 0 25px;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+
+.menu__nav ul a:hover {
+  color: #a0a0a0;
+}
+
+.menu__pictos {
+  z-index: 999;
+  position: absolute;
+  bottom: 64px;
+  left: 100px;
+  list-style-type: none;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 998px) {
+  .menu__pictos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu__pictos li:not(:first-child) {
+  margin-left: 10px;
+}
+
+.menu__pictos li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.v-home {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-<?php $title = 'Mon Blog'; ?>
+<?php $title = 'Erreur'; ?>
 
 <?php ob_start(); ?>
 <style>

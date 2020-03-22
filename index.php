@@ -1,7 +1,6 @@
 <?php 
 
-// DEVNOTE(Jules Fournier): TODO: uncomment next line when we start creating the frontend part
-// require('controllers/frontend.controller.php');
+require('controllers/frontend.controller.php');
 require('controllers/backend.controller.php');
 
 try {
@@ -27,9 +26,11 @@ try {
       } else {
         throw new Exception('Tous les champs ne sont pas remplis...');
       }
+    } elseif ($action == 'showHome') {
+      showVHome();
     }
   } else {
-    showVASeriesList();
+    showVHome();
   }
 } catch (Exception $e) {
   $errorMessage = 'Erreur : ' . $e->getMessage();
