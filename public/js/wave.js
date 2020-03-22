@@ -32,9 +32,7 @@ animate()
 
 canvas.addEventListener('mouseover', () => {
   wave.frequency = 0.06
-  c.strokeStyle = '#a0a0a0'
 })
 canvas.addEventListener('mouseleave', () => {
   wave.frequency = 0
-  c.strokeStyle = '#000'
 })

@@ -88,12 +88,21 @@ html {
   }
 }
 
+.menu__pictos li {
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+}
+
 .menu__pictos li:not(:first-child) {
   margin-left: 10px;
 }
 
 .menu__pictos li:not(:last-child) {
   margin-right: 10px;
+}
+
+.menu__pictos li:hover {
+  opacity: .4;
 }
 
 .v-home {
