@@ -1,4 +1,5 @@
 <?php $title = 'Erreur'; ?>
+<?php $scripts = ''; ?>
 
 <?php ob_start(); ?>
 <style>
