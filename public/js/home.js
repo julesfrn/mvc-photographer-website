@@ -33,7 +33,7 @@ for (let i = 0; i < images.length; i += 1) {
   imgStyle.right = `${getRand(10, 30)}%`
 }
 
-document.addEventListener('click', () => {
+document.querySelector('.container').addEventListener('click', () => {
   for (let i = 0; i < images.length; i += 1) {
     gsap.to(images[i], { duration: 1, ease: "power2.out", z: options[i].z, zIndex: options[i].index})
   }

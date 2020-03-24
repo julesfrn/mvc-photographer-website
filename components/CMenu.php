@@ -1,4 +1,7 @@
 <h1 class="menu__title">Martin <span>Bruno</span></h1>
+<div class="menu__burger-wrapper">
+  <img src="/public/pictos/burger.png">
+</div>
 <nav class="menu__nav">
   <ul>
     <li><a href="#">Index</a></li>
@@ -9,7 +12,7 @@
 <?php if ($shouldShowSocials === true) { ?>
 <ul class="menu__pictos">
   <li>
-    <a href="#" class="home__menu-item">
+    <a href="#">
       <canvas id="wave"></canvas>
     </a>
   </li>

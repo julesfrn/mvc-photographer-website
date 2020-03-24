@@ -12,6 +12,7 @@
 <body>
   <?= $content ?>
   <script src="public/js/gsap.js"></script>
+  <script src="public/js/menu.js"></script>
   <?= $scripts ?>
 </body>
 </html>
