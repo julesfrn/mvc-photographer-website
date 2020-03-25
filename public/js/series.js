@@ -1,8 +1,30 @@
-const images = document.querySelectorAll('.v-home__images-container img')
+const images = document.querySelectorAll('.v-series__images-container img')
 
-document.querySelector('.v-home__new-box').addEventListener('click', () => {
-  location.reload()
+document.querySelector('.v-series__button').addEventListener('click', () => {
+  gsap.to('.v-series__menu', {
+    duration: 1,
+    ease: 'power2.out',
+    x: 0
+  })
+  gsap.to('.v-series__button', {
+    duration: 1,
+    ease: 'power2.out',
+    opacity: 0
+  })
 })
+document.querySelector('.v-series__menu img').addEventListener('click', () => {
+  gsap.to('.v-series__menu', {
+    duration: 1,
+    ease: 'power2.out',
+    x: '100%'
+  })
+  gsap.to('.v-series__button', {
+    duration: 1,
+    ease: 'power2.out',
+    opacity: 1
+  })
+})
+
 
 function getRand(a, b) {
   return Math.floor(Math.random() * (b - a + 1) + a)

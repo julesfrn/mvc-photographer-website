@@ -4,7 +4,7 @@
 </div>
 <nav class="menu__nav">
   <ul>
-    <li><a href="">Index</a></li>
+    <li><a href="?action=showSeries&serie=hesperides">Index</a></li>
     <li><a href="#">Books</a></li>
     <li><a href="?action=showAbout">Infos</a></li>
   </ul>

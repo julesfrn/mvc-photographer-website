@@ -30,6 +30,12 @@ try {
       showVHome();
     } elseif ($action == 'showAbout') {
       showVAbout();
+    } elseif ($action == 'showSeries') {
+      if (isset($_GET['serie'])) {
+        showVSeries($_GET['serie']);
+      } else {
+        throw new Exception('Il manque le nom de la série');
+      }
     }
   } else {
     showVHome();
