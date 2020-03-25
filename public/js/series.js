@@ -1,4 +1,10 @@
-const images = document.querySelectorAll('.v-series__images-container img')
+function getRand(a, b) {
+  return Math.floor(Math.random() * (b - a + 1) + a)
+}
+
+function arrayRotate(arr) {
+  arr.unshift(arr.pop())
+}
 
 document.querySelector('.v-series__button').addEventListener('click', () => {
   gsap.to('.v-series__menu', {
@@ -26,38 +32,32 @@ document.querySelector('.v-series__menu img').addEventListener('click', () => {
 })
 
 
-function getRand(a, b) {
-  return Math.floor(Math.random() * (b - a + 1) + a)
-}
+const images = document.querySelectorAll('.v-series__images-container img')
 
-function arrayRotate(arr) {
-  arr.unshift(arr.pop())
-}
-
-let options = [
-  {
-    index: 600,
-    z: 100
-  },
-  {
-    index: 400,
-    z: -300
-  },
-  {
-    index: 500,
-    z: -100
-  }
-]
+let imagesOptions = []
 
 for (let i = 0; i < images.length; i += 1) {
   imgStyle = images[i].style
+  imgStyle.zIndex = `${500 - i}`
   imgStyle.top = `${getRand(0, 30)}%`
   imgStyle.right = `${getRand(10, 30)}%`
+  if (3 >= i) {
+    imgStyle.opacity = '1'
+  } else {
+    imgStyle.opacity = '0' 
+  }
+  imagesOptions.push(i)
 }
 
 document.querySelector('.container').addEventListener('click', () => {
+  arrayRotate(imagesOptions)
   for (let i = 0; i < images.length; i += 1) {
-    gsap.to(images[i], { duration: 1, ease: "power2.out", z: options[i].z, zIndex: options[i].index})
+    if (3 < imagesOptions[i]) {
+      gsap.to(images[i], { duration: 1, ease: "power2.out", opacity: 0 })
+    } else {
+      gsap.to(images[i], { duration: 1, ease: "power2.out", opacity: 1 })
+    }
+    gsap.to(images[i], { duration: 1, ease: "power2.out", z: 100 - (imagesOptions[i] * 25)})
+    gsap.to(images[i], { delay: 1, duration: 1, ease: "power2.out", zIndex: 500 - imagesOptions[i]})
   }
-  arrayRotate(options)
 })
