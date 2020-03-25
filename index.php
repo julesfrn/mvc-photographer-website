@@ -28,6 +28,8 @@ try {
       }
     } elseif ($action == 'showHome') {
       showVHome();
+    } elseif ($action == 'showAbout') {
+      showVAbout();
     }
   } else {
     showVHome();

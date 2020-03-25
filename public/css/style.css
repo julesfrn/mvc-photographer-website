@@ -8,6 +8,7 @@
 html {
   font-family: 'nunito', sans-serif;
   font-size: 16px;
+  overflow: hidden;
 }
 
 .container {
@@ -35,6 +36,7 @@ html {
   margin: 0 0 0 15px;
   height: 60px;
   line-height: 60px;
+  color: black;
 }
 
 @media screen and (min-width: 998px) {
@@ -302,5 +304,188 @@ html {
 
 .v-home .v-home__new-box-wrapper .v-home__new-box:hover {
   color: #a0a0a0;
+}
+
+.v-about {
+  position: relative;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+  /*CONTACTS*/
+}
+
+@media screen and (min-width: 998px) {
+  .v-about {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-left: 166px;
+  }
+}
+
+.v-about div h1 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+.v-about div p {
+  margin: 0;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 1500px) {
+  .v-about div p {
+    font-size: 17px;
+  }
+}
+
+.v-about div h1 {
+  padding-bottom: 15px;
+}
+
+@media screen and (min-width: 1500px) {
+  .v-about div h1 {
+    padding-bottom: 26px;
+  }
+}
+
+.v-about .apropos {
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 998px) {
+  .v-about .apropos {
+    margin: 0;
+  }
+}
+
+.v-about .apropos p, .v-about .clients p {
+  max-width: 459px;
+}
+
+.v-about .apropos, .v-about .clients, .v-about .contacts {
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 1500px) {
+  .v-about .apropos, .v-about .clients, .v-about .contacts {
+    padding-bottom: 52px;
+  }
+}
+
+.v-about .contacts div p {
+  font-size: 13px;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 1500px) {
+  .v-about .contacts div p {
+    font-size: 15px;
+  }
+}
+
+.v-about .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 998px) {
+  .v-about .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.v-about .represent {
+  padding-right: 63px;
+}
+
+.v-about .watermark p {
+  font-size: 10px !important;
+}
+
+.v-about .imageMartinBruno {
+  width: 100%;
+  height: 67px;
+  max-height: 67px;
+  position: absolute;
+  background: url(/public/infos/martin_bruno.png);
+  background-position: 50% 23%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 998px) {
+  .v-about .imageMartinBruno {
+    height: auto;
+    max-height: 100%;
+    width: 35%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.v-about .imageMartinBruno img {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (min-width: 998px) {
+  .v-about .imageMartinBruno img {
+    display: block;
+  }
+}
+
+.v-about .imageClients {
+  width: 199px;
+  height: 296px;
+  background-size: cover;
+  position: absolute;
+  right: calc(35% - 199px / 2);
+  top: 20%;
+  -webkit-transition: background-image .5s ease-in-out;
+  transition: background-image .5s ease-in-out;
+  display: none;
+}
+
+@media screen and (min-width: 998px) {
+  .v-about .imageClients {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .v-about .imageClients {
+    right: calc(35% - 265px / 2);
+    width: 265px;
+    height: 395px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

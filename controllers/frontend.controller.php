@@ -8,3 +8,6 @@ function showVhome() {
   $images = $imagesManager->get3RandomImages();
   require('views/frontend/VHome.php');
 }
+function showVAbout() {
+  require('views/frontend/VAbout.php');
+}

@@ -1,5 +1,6 @@
 // vars
 $mobile-breakpoint: 998px;
+$small-desktop-breakpoint: 1500px;
 $mobile-menu-height: 60px;
 $y-margin: 64px;
 $x-margin: 100px;
@@ -15,6 +16,7 @@ $x-margin: 100px;
 html {
   font-family: 'nunito', sans-serif;
   font-size: 16px;
+  overflow: hidden;
 }
 
 .container {
@@ -46,6 +48,7 @@ html {
   margin: 0 0 0 15px;
   height: $mobile-menu-height;
   line-height: $mobile-menu-height;
+  color: black;
   @media screen and (min-width: $mobile-breakpoint) {
     margin: 0;
     padding: $y-margin 0 0 $x-margin;
@@ -224,6 +227,128 @@ html {
       &:hover {
         color: #a0a0a0;
       }
+    }
+  }
+}
+
+//  /$$    /$$  /$$$$$$  /$$                             /$$    
+// | $$   | $$ /$$__  $$| $$                            | $$    
+// | $$   | $$| $$  \ $$| $$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$  
+// |  $$ / $$/| $$$$$$$$| $$__  $$ /$$__  $$| $$  | $$|_  $$_/  
+//  \  $$ $$/ | $$__  $$| $$  \ $$| $$  \ $$| $$  | $$  | $$    
+//   \  $$$/  | $$  | $$| $$  | $$| $$  | $$| $$  | $$  | $$ /$$
+//    \  $/   | $$  | $$| $$$$$$$/|  $$$$$$/|  $$$$$$/  |  $$$$/
+//     \_/    |__/  |__/|_______/  \______/  \______/    \___/  
+.v-about {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 0;
+  @media screen and (min-width: $mobile-breakpoint) {
+    justify-content: flex-end;
+    padding-left: 166px;
+  }
+  div h1 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  div p{
+    margin: 0;
+    font-weight: normal;
+    line-height: 23px;
+    font-size: 15px;
+    @media screen and (min-width: $small-desktop-breakpoint) {
+      font-size: 17px;
+    }
+  }
+  div h1{
+    padding-bottom: 15px;
+    @media screen and (min-width: $small-desktop-breakpoint) {
+      padding-bottom: 26px;
+    }
+  }
+  .apropos {
+    margin-top: 100px;
+    @media screen and (min-width: $mobile-breakpoint) {
+      margin: 0;
+    }
+  }
+  .apropos p, .clients p {
+    max-width: 459px;
+  }
+  .apropos, .clients, .contacts {
+    padding-bottom: 30px;
+    @media screen and (min-width: $small-desktop-breakpoint) {
+      padding-bottom: 52px;
+    }
+  }
+  /*CONTACTS*/
+  .contacts div p{
+    font-size: 13px;
+    @media screen and (min-width: $small-desktop-breakpoint) {
+      font-size: 15px;
+    }
+    line-height: 26px;
+  }
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $mobile-breakpoint) {
+      flex-direction: row;
+    }
+  }
+  .represent{
+    padding-right: 63px;
+  }
+  .watermark p{
+    font-size: 10px !important;
+  }
+  .imageMartinBruno{
+    width: 100%;
+    height: 67px;
+    max-height: 67px;
+    position: absolute;
+    background: url(/public/infos/martin_bruno.png);
+    background-position: 50% 23%;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+    @media screen and (min-width: $mobile-breakpoint) {
+      height: auto;
+      max-height: 100%;
+      width: 35%;
+      flex-direction: row;
+    }
+    img {
+      display: none;
+      object-fit: cover;
+      width: 100%;
+      @media screen and (min-width: $mobile-breakpoint) {
+        display: block;
+      }
+    }
+  }
+  .imageClients{
+    width: 199px;
+    height: 296px; 
+    background-size: cover;
+    position: absolute;
+    right: calc(35% - 199px / 2);
+    top: 20%;
+    transition: background-image .5s ease-in-out;
+    display: none;
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: block;
+    }
+    @media screen and (min-width: $small-desktop-breakpoint) {
+      right: calc(35% - 265px / 2);
+      width: 265px;
+      height: 395px;
     }
   }
 }
