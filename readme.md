@@ -1,4 +1,4 @@
-# Martin Bruno
+# MVC photographer website built with an MVC architecture 
 
 This repo is a php web site for the photographer Martin Bruno.
 
